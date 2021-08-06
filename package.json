@@ -1,0 +1,23 @@
+{
+  "name": "lam",
+  "version": "1.0.0",
+  "description": "A small social network",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "Social",
+    "Network"
+  ],
+  "author": "Faden Sibam",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0"
+  }
+}

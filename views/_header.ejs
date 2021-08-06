@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> WeChat - Social Network</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="materialize.css">
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="design.css">
+        <script src="materialize.js"></script>
+    </head>
+    <body>
+        <nav class="nav-extended purple">
+            <div class="nav-wrapper">
+                
+                <div class="container">
+                    <div class="brand-logo">
+                        WeChat
+                    </div>
+                    <ul class="right">
+                        <a href="/"><span class=" white black-text hide-on-small-only" style="padding: 0.5em;border-radius:0.5em;" > <%= user.name%> </span></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-content purple">
+                <ul class="tabs tabs-fixed-width tabs-transparent">
+                    <li class="tab">
+                        <a href="#wall" onclick="menua.setActive();"> 
+                           <i class="fa fa-newspaper"></i> Wall 
+                        </a>
+                        
+                    </li>
+                    <li class="tab">
+                        <a href="#chats"> 
+                           <i class="fa fa-envelope"></i> Chats
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="#notifications"> 
+                            <i class="fa fa-bell"></i>
+                            Notifications <!--span class="badge new red">5</span-->
+                        
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+   

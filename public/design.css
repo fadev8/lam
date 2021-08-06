@@ -1,0 +1,8 @@
+#login-page, #signup-page, #postform,{
+    background:rgba(0,0,0,0.1);
+}
+
+.input-field{
+    background: white;
+    border-radius: 0.5em;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> WeChat - Social Network</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="materialize.css">
+        <link rel="stylesheet" href="design.css">
+        <script src="materialize.js"></script>
+    </head>
+    <body>
+        <nav class="purple white-text">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="brand-logo">
+                        WeChat
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row ">
+            <br class="hide-on-small-only">
+            <% if(error) {%>
+            <script>
+                M.toast({html:'<%= error%>',displayLength:6000, classes:'center center-align'});
+            </script>
+            <% } %>
+            <br class="hide-on-small-only">
+            <div class="col s12 m6 offset-m3 purple lighten-2">
+                <ul class="tabs tabs-fixed-width purple lighten-2" >
+                    <li class="tab withe-text">
+                        <a href="#login-page" class="white-text">
+                            Login
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="#signup-page"  class="white-text">
+                            Signup
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Login form-->
+            <div class="col s12 m6 offset-m3" id="login-page">
+                <form action="/" method="post" >
+                    <div class="container" >
+                        <div class="input-field">
+                            
+                            <input type="tel" name="logintel" id="tel" required>
+                            <label for="tel">Telephone</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" name="loginpassword" id="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <input type="submit" class="btn" value="Login" style="width:40%;">
+                        <br>
+                        <br>
+                    </div>
+                </form>
+            </div>
+            <!-- Signup form-->
+            <div class="col s12 m6 offset-m3" id="signup-page">
+                <form action="/" method="POST">
+                    <div class="container">
+                        <div class="input-field">
+                            <input type="text" name="signname" required>
+                            <label for="">Full name</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="tel" required name="signtel">
+                            <label for="">Telephone</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" name="signpass" required>
+                            <label for="">Password</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" name="signpassconf" required>
+                            <label for="">Confirm password</label>
+                        </div>
+
+                        <input type="submit" value="Signup" class="btn" style="width:40%;">
+                        <br>
+                        <br>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            M.AutoInit();
+           // alert('Hout');
+        </script>
+        <Script src="java.js"></Script>
+    </body>
+</html>
