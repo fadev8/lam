@@ -6,7 +6,9 @@
                 <a class="btn modal-trigger purple" href="#modal-postform">New post</a>
             </p>
             <p class="col s12 m8">
-                <input type="search" placeholder="Search something">
+                <form action="/posts" method="get">
+                    <input type="search" name="search" placeholder="Search something">
+                </form>
             </p>
         </div>
 
@@ -14,19 +16,19 @@
         <div class="modal" id="modal-postform">
             <br>
             <h5 class="center">Write a new post</h5>
-            <form action="" method="POST" id="postform">
+            <form action="/posts" method="POST" id="postform">
                 <div class="container">
-                    <input type="hidden" name="postuserid" value="<%= user._id %>">
-                    <input type="hidden" name="postusername" value="<%= user.name%>">
+                    <input type="hidden" name="posterid" value="<%= user._id %>">
+                    <input type="hidden" name="postername" value="<%= user.name%>">
                     <div class="input-field">
-                        <textarea name="posttext" id="posttext" class="materialize-textarea" id="" cols="30"
+                        <textarea name="text" id="posttext" class="materialize-textarea" id="" cols="30"
                             rows="1"></textarea>
                         <label for="">Write something</label>
                     </div>
                     <div class="input-field file-field">
                         <div class="btn purple darken-3">
                             <span>Photo</span>
-                            <input type="file" name="postphoto" id="postphoto">
+                            <input type="file" name="photo" id="postphoto">
                         </div>
                         <div class="file-path-wrapper">
                             <input type="text" class="fiel-path-validate">
@@ -35,7 +37,7 @@
                     <div class="input-field file-field">
                         <div class="btn purple darken-3">
                             <span>Video</span>
-                            <input type="file" name="postvideo" id="postvideo">
+                            <input type="file" name="video" id="postvideo">
                         </div>
                         <div class="file-path-wrapper">
                             <input type="text" class="fiel-path-validate">
@@ -58,7 +60,7 @@
             <div class="col s12" style="background: #E8E8E8">
                 <strong><%= post.postername%></strong><br>
                 <p><%= post.text %></p>
-                <video src="/postimg/big_buck_bunny.mp4" controls class="responsive-video"></video>
+                <!--video src="/postimg/big_buck_bunny.mp4" controls class="responsive-video"></video-->
                 <em><br> <%= post.postedat %></em>
                 <p>
                     <span class="left"> <i class="fa fa-thumbs-up"></i> Likes</span>

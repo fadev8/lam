@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 var postSchema = new Schema({
     posterid:{type:String},
     postername:{type:String},
-    text:{type:String},
+    text:{type:String, required:true},
     photo:{type:String},
     video:{type:String},
     likes:[],
