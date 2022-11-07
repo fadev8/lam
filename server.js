@@ -1,5 +1,9 @@
 const app = require('./app');
 const mongoose = require('mongoose');
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
 
 //connecting to the database
 mongoose.connect('mongodb://localhost:27017/lam').then(con =>{
@@ -8,12 +12,6 @@ mongoose.connect('mongodb://localhost:27017/lam').then(con =>{
     console.log(err);
 });
 
-/*
-{useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connection.on('open',()=>{
-    console.log('MongoDB on');
-});
-*/
 
 //running the server
 const port = 8080;

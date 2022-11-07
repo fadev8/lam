@@ -5,6 +5,6 @@ const controller = require('../controllers/postController');
 
 router.use(bodyparser.urlencoded({extended:false}));
 
-router.route('/').post(controller.addPost);
+router.route('/').post(controller.addPost).get(controller.getAllPosts);
 
 module.exports = router;
